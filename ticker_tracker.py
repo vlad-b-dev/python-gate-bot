@@ -1,5 +1,3 @@
-# ticker_tracker.py
-
 import json
 import time
 import sys
@@ -16,9 +14,10 @@ class TickerTracker:
         self.window = timedelta(seconds=MAX_FLUCTUATION_WINDOW)
 
     def _on_open(self, ws):
+        # Subscribe to the ticker channel for the symbol
         payload = {
             "time": int(time.time()),
-            "channel":"spot.tickers",
+            "channel": "spot.tickers",
             "event": "subscribe",
             "payload": [f"{self.symbol}_USDT"]
         }
@@ -26,14 +25,47 @@ class TickerTracker:
 
     def _on_message(self, ws, message):
         data = json.loads(message)
+        # Only handle ticker messages
         if data.get("channel") != "spot.tickers":
             return
 
-        for entry in data.get("result", []):
-            _, last_price, *_, _ = entry
-            now = datetime.now(timezone.utc)
-            price = float(last_price)
+        now = datetime.now(timezone.utc)
 
+        print("PRUEBA SE LLEGA AQUI")
+        print(f"[{data}]")
+                
+        results = data.get("result")
+        if results is None:
+            return
+
+        # Normalize entries: snapshot dict or list of lists
+        entries = []
+        if isinstance(results, dict):
+            # Initial snapshot comes as a dict of symbol: info
+            for pair, info in results.items():
+                entries.append((pair, info))
+        elif isinstance(results, list):
+            entries = results
+        else:
+            return
+
+        for entry in entries:
+            # Extract price
+            try:
+                if isinstance(entry, tuple):
+                    # Snapshot entry: (pair, info dict)
+                    _, info = entry
+                    price = float(info.get('last', 0))
+                elif isinstance(entry, list) or isinstance(entry, tuple):
+                    # Update entry: [pair, last_price, ...]
+                    price = float(entry[1])
+                else:
+                    continue
+            except (ValueError, TypeError):
+                # Skip non-numeric
+                continue
+
+            # Initialize on first valid tick
             if self.initial_price is None:
                 self.initial_price = price
                 self.initial_time = now
@@ -42,10 +74,11 @@ class TickerTracker:
 
             elapsed = (now - self.initial_time).total_seconds()
             if elapsed <= 0:
-                return
+                continue
 
             speed = ((price - self.initial_price) / self.initial_price * 100) / elapsed
 
+            # Threshold breach
             if abs(speed) >= FLUCTUATION_THRESHOLD:
                 print(
                     f"[{now.isoformat()}] ⚠️ {self.symbol} speed {speed:+.2f}%/s over {int(elapsed)}s → {price:.8f} USDT"
@@ -53,6 +86,7 @@ class TickerTracker:
                 ws.close()
                 return
 
+            # Max window elapsed
             if now - self.initial_time >= self.window:
                 print(
                     f"[{now.isoformat()}] ℹ️ {self.symbol} window elapsed ({MAX_FLUCTUATION_WINDOW}s); final price: {price:.8f} USDT"
@@ -65,7 +99,7 @@ class TickerTracker:
         print(f"[{now.isoformat()}] ERROR websocket {self.symbol}: {error}", file=sys.stderr)
 
     def start(self):
-        import websocket  # defer until start() is called
+        import websocket  # defer until start()
         self.ws = websocket.WebSocketApp(
             WEB_SOCKET_URL,
             on_open=self._on_open,
