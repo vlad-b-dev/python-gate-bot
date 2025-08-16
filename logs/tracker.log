@@ -1,0 +1,18 @@
+2025-08-14T17:17:18+0200 [INFO] + New upcoming: TCOM at 2025-08-15T13:00:00+00:00
+2025-08-15T14:32:34+0200 [INFO] + New upcoming: TCOM at 2025-08-15T13:00:00+00:00
+2025-08-15T14:35:42+0200 [INFO] + New upcoming: TCOM at 2025-08-15T13:00:00+00:00
+2025-08-15T14:36:26+0200 [INFO] + New upcoming: TCOM at 2025-08-15T13:00:00+00:00
+2025-08-15T14:37:20+0200 [INFO] + New upcoming: TCOM at 13:00
+2025-08-15T14:49:42+0200 [INFO] + New upcoming: TCOM at 11:00
+2025-08-15T14:49:45+0200 [INFO] Websocket connected
+2025-08-15T14:50:45+0200 [ERROR] error from callback <bound method TickerTracker._on_error of <ticker_tracker.TickerTracker object at 0x000001E190B8A3F0>>: name 'logging' is not defined
+2025-08-15T14:50:45+0200 [INFO] tearing down on exception name 'logging' is not defined
+2025-08-15T14:57:06+0200 [INFO] + New upcoming: TCOM at 2025-08-15T13:00:00+02:00
+2025-08-15T14:57:08+0200 [INFO] Websocket connected
+2025-08-15T14:58:08+0200 [ERROR] error from callback <bound method TickerTracker._on_error of <ticker_tracker.TickerTracker object at 0x000002813E8B0140>>: name 'timezone' is not defined
+2025-08-15T14:58:08+0200 [INFO] tearing down on exception name 'timezone' is not defined
+2025-08-15T15:57:08+0200 [INFO] + New upcoming: AIO at 2025-08-15T15:00:00+02:00
+2025-08-15T15:57:10+0200 [INFO] Websocket connected
+2025-08-15T15:57:11+0200 [ERROR] error from callback <bound method TickerTracker._on_message of <ticker_tracker.TickerTracker object at 0x0000028140083D10>>: name 'logging' is not defined
+2025-08-15T15:57:11+0200 [ERROR] error from callback <bound method TickerTracker._on_error of <ticker_tracker.TickerTracker object at 0x0000028140083D10>>: name 'timezone' is not defined
+2025-08-15T15:57:11+0200 [INFO] tearing down on exception name 'timezone' is not defined

@@ -1,5 +1,5 @@
 
-UPCOMING_TOKENS_URL = "https://www.gate.com/es/price/view/new-cryptocurrencies"
+UPCOMING_TOKENS_URL = "https://www.gate.io/es/price/view/new-cryptocurrencies"
 WEB_SOCKET_URL = "wss://api.gateio.ws/ws/v4/"
 REFRESH_INTERVAL = 600     
 FLUCTUATION_CHECK_INTERVAL = 1         

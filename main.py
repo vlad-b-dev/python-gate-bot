@@ -4,9 +4,25 @@ import argparse
 import time
 import threading
 import sys
+import os
+import logging
 from datetime import datetime, timezone
-
 from ticker_tracker import TickerTracker
+
+LOG_DIR = "C:/Users/usuario/python/python-gate-bot/logs"
+os.makedirs(LOG_DIR, exist_ok=True) 
+
+LOG_FILE = os.path.join(LOG_DIR, "gate-bot.log")  
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%dT%H:%M:%S%z",
+    handlers=[
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler(LOG_FILE, encoding="utf-8")
+    ]
+)
 
 def fetch_upcoming_currencies(upcoming_page_url):
     import requests
@@ -34,21 +50,22 @@ def fetch_upcoming_currencies(upcoming_page_url):
 
     return upcoming
 
-def should_refresh(last_refresh, now, REFRESH_INTERVAL):
-    return (now - last_refresh).total_seconds() >= REFRESH_INTERVAL
+def should_refresh(last_refresh, now, refresh_interval):
+    return (now - last_refresh).total_seconds() >= refresh_interval
 
-def refresh_upcoming(upcoming, processed, last_refresh, now, UPCOMING_TOKENS_URL):
+def refresh_upcoming(upcoming, processed, last_refresh, now, upcoming_tokens_url):
     try:
-        updated = fetch_upcoming_currencies(UPCOMING_TOKENS_URL)
+        updated = fetch_upcoming_currencies(upcoming_tokens_url)
         for sym, launch_date in updated.items():
             if sym not in upcoming:
-                print(f"[{now.isoformat()}] + New upcoming: {sym} at {launch_date.isoformat()}")
+                logging.info(f"+ New upcoming: {sym} at {launch_date.isoformat()}")
+
             elif upcoming[sym] != launch_date and sym not in processed:
-                print(f"[{now.isoformat()}] → Updated launch: {sym} at {launch_date.isoformat()}")
+                logging.info(f"→ Updated launch: {sym} at {launch_date.isoformat()}")
             upcoming[sym] = launch_date
         return now
     except Exception as e:
-        print(f"[{now.isoformat()}] ERROR fetching upcoming: {e}", file=sys.stderr)
+        logging.info(f"ERROR fetching upcoming: {e}")
         return last_refresh
 
 def check_for_launch(upcoming, processed, now):
@@ -62,7 +79,7 @@ def check_for_launch(upcoming, processed, now):
             ).start()
             processed.add(sym)
 
-def tracker_loop(UPCOMING_TOKENS_URL, REFRESH_INTERVAL, FLUCTUATION_CHECK_INTERVAL):
+def tracker_loop(upcoming_tokens_url, refresh_interval, fluctuation_check_interval):
     upcoming = {}
     processed = set()
     last_refresh = datetime.min.replace(tzinfo=timezone.utc)
@@ -71,12 +88,12 @@ def tracker_loop(UPCOMING_TOKENS_URL, REFRESH_INTERVAL, FLUCTUATION_CHECK_INTERV
         now = datetime.now(timezone.utc)
         check_for_launch(upcoming, processed, now)
 
-        if should_refresh(last_refresh, now, REFRESH_INTERVAL):
+        if should_refresh(last_refresh, now, refresh_interval):
             last_refresh = refresh_upcoming(
-                upcoming, processed, last_refresh, now, UPCOMING_TOKENS_URL
+                upcoming, processed, last_refresh, now, upcoming_tokens_url
             )
 
-        time.sleep(FLUCTUATION_CHECK_INTERVAL)
+        time.sleep(fluctuation_check_interval)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -89,7 +106,7 @@ def main():
 
     if args.test:
         symbol = args.test.upper()
-        print(f"[{datetime.now(timezone.utc).isoformat()}] 🚀 TEST MODE: launching tracker for {symbol}")
+        logging.info(f"🚀 TEST MODE: launching tracker for {symbol}")
         threading.Thread(target=TickerTracker(symbol).start, daemon=True).start()
         try:
             while True:
@@ -98,16 +115,15 @@ def main():
             print("\nTest interrupted by user")
             sys.exit(0)
 
-    # now import the rest only for normal mode
-    import requests  # ensure these are on your PYTHONPATH when running without --test
+    import requests 
     import re
     from bs4 import BeautifulSoup
     from config import (
         UPCOMING_TOKENS_URL,
         REFRESH_INTERVAL,
         FLUCTUATION_CHECK_INTERVAL,
-        FLUCTUATION_THRESHOLD,      # still used by TickerTracker
-        MAX_FLUCTUATION_WINDOW,     # still used by TickerTracker
+        FLUCTUATION_THRESHOLD,     
+        MAX_FLUCTUATION_WINDOW,    
     )
 
     print("\n--- CURRENCIE TRACKER STARTED ---")

@@ -25,81 +25,56 @@ class TickerTracker:
 
     def _on_message(self, ws, message):
         data = json.loads(message)
-        # Only handle ticker messages
-        if data.get("channel") != "spot.tickers":
+        # Only process real ticker updates; ignore subscribe confirmations
+        if data.get("channel") != "spot.tickers" or data.get("event") != "update":
             return
 
         now = datetime.now(timezone.utc)
+        info = data.get("result", {})
 
-        print("PRUEBA SE LLEGA AQUI")
-        print(f"[{data}]")
-                
-        results = data.get("result")
-        if results is None:
+        # Extract the last price
+        try:
+            price = float(info["last"])
+        except (KeyError, ValueError, TypeError):
+            # missing or invalid price → skip
             return
 
-        # Normalize entries: snapshot dict or list of lists
-        entries = []
-        if isinstance(results, dict):
-            # Initial snapshot comes as a dict of symbol: info
-            for pair, info in results.items():
-                entries.append((pair, info))
-        elif isinstance(results, list):
-            entries = results
-        else:
+        # —— LOG EVERY PRICE UPDATE —— 
+        logging.info(f"ℹ️ {self.symbol} price tick → {price:.8f} USDT")
+
+        # On first tick, record initial values
+        if self.initial_price is None:
+            self.initial_price = price
+            self.initial_time = now
+            logging.info(f"✅ Connected for {self.symbol} — initial price: {price:.8f} USDT")
             return
 
-        for entry in entries:
-            # Extract price
-            try:
-                if isinstance(entry, tuple):
-                    # Snapshot entry: (pair, info dict)
-                    _, info = entry
-                    price = float(info.get('last', 0))
-                elif isinstance(entry, list) or isinstance(entry, tuple):
-                    # Update entry: [pair, last_price, ...]
-                    price = float(entry[1])
-                else:
-                    continue
-            except (ValueError, TypeError):
-                # Skip non-numeric
-                continue
+        elapsed = (now - self.initial_time).total_seconds()
+        if elapsed <= 0:
+            return
 
-            # Initialize on first valid tick
-            if self.initial_price is None:
-                self.initial_price = price
-                self.initial_time = now
-                print(f"[{now.isoformat()}] ✅ Connected for {self.symbol} — initial price: {price:.8f} USDT")
-                return
+        speed = ((price - self.initial_price) / self.initial_price * 100) / elapsed
 
-            elapsed = (now - self.initial_time).total_seconds()
-            if elapsed <= 0:
-                continue
+        # Threshold breach
+        if abs(speed) >= FLUCTUATION_THRESHOLD:
+            print(
+                f"[{now.isoformat()}] ⚠️ {self.symbol} speed {speed:+.2f}%/s over {int(elapsed)}s → {price:.8f} USDT"
+            )
+            ws.close()
+            return
 
-            speed = ((price - self.initial_price) / self.initial_price * 100) / elapsed
-
-            # Threshold breach
-            if abs(speed) >= FLUCTUATION_THRESHOLD:
-                print(
-                    f"[{now.isoformat()}] ⚠️ {self.symbol} speed {speed:+.2f}%/s over {int(elapsed)}s → {price:.8f} USDT"
-                )
-                ws.close()
-                return
-
-            # Max window elapsed
-            if now - self.initial_time >= self.window:
-                print(
-                    f"[{now.isoformat()}] ℹ️ {self.symbol} window elapsed ({MAX_FLUCTUATION_WINDOW}s); final price: {price:.8f} USDT"
-                )
-                ws.close()
-                return
+        # Max window elapsed
+        if now - self.initial_time >= self.window:
+            print(
+                f"[{now.isoformat()}] ℹ️ {self.symbol} window elapsed ({MAX_FLUCTUATION_WINDOW}s); final price: {price:.8f} USDT"
+            )
+            ws.close()
 
     def _on_error(self, ws, error):
-        now = datetime.now(timezone.utc)
-        print(f"[{now.isoformat()}] ERROR websocket {self.symbol}: {error}", file=sys.stderr)
+        logging.info(f"ERROR websocket {self.symbol}: {error}")
 
     def start(self):
-        import websocket  # defer until start()
+        import websocket  # defer until start() is called
         self.ws = websocket.WebSocketApp(
             WEB_SOCKET_URL,
             on_open=self._on_open,
