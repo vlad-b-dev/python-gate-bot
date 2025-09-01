@@ -1,0 +1,264 @@
+2025-08-28T18:42:29+0200 [INFO] + New upcoming: CELB at 2025-08-29T08:00:00+00:00
+2025-08-28T18:42:29+0200 [INFO] + New upcoming: MISSION at 2025-08-29T09:00:00+00:00
+2025-08-28T18:42:29+0200 [INFO] + New upcoming: AIOT at 2025-08-30T00:00:00+00:00
+2025-08-29T13:23:42+0200 [INFO] ERROR fetching upcoming: HTTPSConnectionPool(host='www.gate.io', port=443): Max retries exceeded with url: /es/price/view/new-cryptocurrencies (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A5590DC200>: Failed to resolve 'www.gate.io' ([Errno 11001] getaddrinfo failed)"))
+2025-08-29T13:23:42+0200 [ERROR] error from callback <bound method TickerTracker._on_error of <ticker_tracker.TickerTracker object at 0x000001A5575912E0>>: name 'logging' is not defined
+2025-08-29T13:23:42+0200 [ERROR] error from callback <bound method TickerTracker._on_error of <ticker_tracker.TickerTracker object at 0x000001A557292A50>>: name 'logging' is not defined
+2025-08-29T13:23:42+0200 [INFO] tearing down on exception name 'logging' is not defined
+2025-08-29T13:23:43+0200 [INFO] tearing down on exception name 'logging' is not defined
+2025-08-29T13:23:43+0200 [INFO] ERROR fetching upcoming: HTTPSConnectionPool(host='www.gate.io', port=443): Max retries exceeded with url: /es/price/view/new-cryptocurrencies (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A5590DF710>: Failed to resolve 'www.gate.io' ([Errno 11001] getaddrinfo failed)"))
+2025-08-29T13:23:45+0200 [INFO] ERROR fetching upcoming: HTTPSConnectionPool(host='www.gate.io', port=443): Max retries exceeded with url: /es/price/view/new-cryptocurrencies (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A557293050>: Failed to resolve 'www.gate.io' ([Errno 11001] getaddrinfo failed)"))
+2025-08-29T14:33:56+0200 [INFO] + New upcoming: BLOCKST at 2025-08-30T08:00:00+00:00
+2025-08-29T14:33:56+0200 [INFO] + New upcoming: NODE at 2025-09-01T09:00:00+00:00
+2025-08-29T14:33:56+0200 [INFO] + New upcoming: WLFI at 2025-09-01T11:00:00+00:00
+2025-08-29T22:10:43+0200 [INFO] ERROR fetching upcoming: HTTPSConnectionPool(host='www.gate.io', port=443): Max retries exceeded with url: /es/price/view/new-cryptocurrencies (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A5577A4FE0>: Failed to resolve 'www.gate.io' ([Errno 11001] getaddrinfo failed)"))
+2025-08-29T22:10:44+0200 [INFO] ERROR fetching upcoming: HTTPSConnectionPool(host='www.gate.io', port=443): Max retries exceeded with url: /es/price/view/new-cryptocurrencies (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A557C15700>: Failed to resolve 'www.gate.io' ([Errno 11001] getaddrinfo failed)"))
+2025-08-29T22:10:45+0200 [INFO] ERROR fetching upcoming: HTTPSConnectionPool(host='www.gate.io', port=443): Max retries exceeded with url: /es/price/view/new-cryptocurrencies (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A557C16030>: Failed to resolve 'www.gate.io' ([Errno 11001] getaddrinfo failed)"))
+2025-08-29T22:10:46+0200 [INFO] ERROR fetching upcoming: HTTPSConnectionPool(host='www.gate.io', port=443): Max retries exceeded with url: /es/price/view/new-cryptocurrencies (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A557C16930>: Failed to resolve 'www.gate.io' ([Errno 11001] getaddrinfo failed)"))
+2025-08-29T22:10:47+0200 [INFO] ERROR fetching upcoming: HTTPSConnectionPool(host='www.gate.io', port=443): Max retries exceeded with url: /es/price/view/new-cryptocurrencies (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A557C17260>: Failed to resolve 'www.gate.io' ([Errno 11001] getaddrinfo failed)"))
+2025-09-01T12:00:47+0200 [INFO] 🚀 TEST MODE: launching tracker for AIOT
+2025-09-01T12:00:55+0200 [INFO] 🚀 TEST MODE: launching tracker for AIOT
+2025-09-01T12:00:56+0200 [INFO] Websocket connected
+2025-09-01T12:00:59+0200 [INFO] ℹ️ AIOT price tick → 1.55940000 USDT
+2025-09-01T12:00:59+0200 [INFO] ✅ Connected for AIOT — initial price: 1.55940000 USDT
+2025-09-01T12:01:01+0200 [INFO] ℹ️ AIOT price tick → 1.55940000 USDT
+2025-09-01T12:01:04+0200 [INFO] ℹ️ AIOT price tick → 1.55940000 USDT
+2025-09-01T12:01:08+0200 [INFO] ℹ️ AIOT price tick → 1.55940000 USDT
+2025-09-01T12:01:09+0200 [INFO] ℹ️ AIOT price tick → 1.55940000 USDT
+2025-09-01T12:01:10+0200 [INFO] ℹ️ AIOT price tick → 1.55940000 USDT
+2025-09-01T12:01:11+0200 [INFO] ℹ️ AIOT price tick → 1.55940000 USDT
+2025-09-01T12:08:46+0200 [INFO] + New upcoming: NODE at 2025-09-01T09:00:00+00:00
+2025-09-01T12:08:46+0200 [INFO] + New upcoming: WLFI at 2025-09-01T10:00:00+00:00
+2025-09-01T12:08:46+0200 [INFO] + New upcoming: FOREST at 2025-09-01T11:00:00+00:00
+2025-09-01T12:08:46+0200 [INFO] + New upcoming: Q at 2025-09-02T06:00:00+00:00
+2025-09-01T12:08:46+0200 [INFO] + New upcoming: MCH at 2025-09-03T10:00:00+00:00
+2025-09-01T12:08:48+0200 [INFO] Websocket connected
+2025-09-01T12:08:48+0200 [INFO] Websocket connected
+2025-09-01T12:09:48+0200 [INFO] ERROR websocket WLFI: Connection to remote host was lost.
+2025-09-01T12:09:48+0200 [ERROR] Connection to remote host was lost. - goodbye
+2025-09-01T12:09:48+0200 [INFO] ERROR websocket NODE: Connection to remote host was lost.
+2025-09-01T12:09:48+0200 [ERROR] Connection to remote host was lost. - goodbye
+2025-09-01T12:22:07+0200 [INFO] RAW HTLM DATE: 2025-09-01 11:00:00
+2025-09-01T12:22:07+0200 [INFO] RAW HTLM DATE: 2025-09-01 12:00:00
+2025-09-01T12:22:07+0200 [INFO] RAW HTLM DATE: 2025-09-01 13:00:00
+2025-09-01T12:22:07+0200 [INFO] RAW HTLM DATE: 2025-09-02 08:00:00
+2025-09-01T12:22:07+0200 [INFO] RAW HTLM DATE: 2025-09-03 12:00:00
+2025-09-01T12:22:07+0200 [INFO] + New upcoming: NODE at 2025-09-01T09:00:00+00:00
+2025-09-01T12:22:07+0200 [INFO] + New upcoming: WLFI at 2025-09-01T10:00:00+00:00
+2025-09-01T12:22:07+0200 [INFO] + New upcoming: FOREST at 2025-09-01T11:00:00+00:00
+2025-09-01T12:22:07+0200 [INFO] + New upcoming: Q at 2025-09-02T06:00:00+00:00
+2025-09-01T12:22:07+0200 [INFO] + New upcoming: MCH at 2025-09-03T10:00:00+00:00
+2025-09-01T12:22:10+0200 [INFO] Websocket connected
+2025-09-01T12:22:10+0200 [INFO] Websocket connected
+2025-09-01T12:22:10+0200 [INFO] ℹ️ NODE price tick → 0.00000000 USDT
+2025-09-01T12:22:10+0200 [INFO] ✅ Connected for NODE — initial price: 0.00000000 USDT
+2025-09-01T12:23:10+0200 [INFO] ERROR websocket WLFI: Connection to remote host was lost.
+2025-09-01T12:23:10+0200 [ERROR] Connection to remote host was lost. - goodbye
+2025-09-01T12:23:10+0200 [INFO] ERROR websocket NODE: Connection to remote host was lost.
+2025-09-01T12:23:10+0200 [ERROR] Connection to remote host was lost. - goodbye
+2025-09-01T12:23:34+0200 [INFO] RAW HTLM DATE: 2025-09-01 11:00:00 for NODE
+2025-09-01T12:23:34+0200 [INFO] RAW HTLM DATE: 2025-09-01 12:00:00 for WLFI
+2025-09-01T12:23:34+0200 [INFO] RAW HTLM DATE: 2025-09-01 13:00:00 for FOREST
+2025-09-01T12:23:34+0200 [INFO] RAW HTLM DATE: 2025-09-02 08:00:00 for Q
+2025-09-01T12:23:34+0200 [INFO] RAW HTLM DATE: 2025-09-03 12:00:00 for MCH
+2025-09-01T12:23:34+0200 [INFO] + New upcoming: NODE at 2025-09-01T09:00:00+00:00
+2025-09-01T12:23:34+0200 [INFO] + New upcoming: WLFI at 2025-09-01T10:00:00+00:00
+2025-09-01T12:23:34+0200 [INFO] + New upcoming: FOREST at 2025-09-01T11:00:00+00:00
+2025-09-01T12:23:34+0200 [INFO] + New upcoming: Q at 2025-09-02T06:00:00+00:00
+2025-09-01T12:23:34+0200 [INFO] + New upcoming: MCH at 2025-09-03T10:00:00+00:00
+2025-09-01T12:23:36+0200 [INFO] Websocket connected
+2025-09-01T12:23:36+0200 [INFO] Websocket connected
+2025-09-01T12:24:37+0200 [INFO] ERROR websocket NODE: Connection to remote host was lost.
+2025-09-01T12:24:37+0200 [ERROR] Connection to remote host was lost. - goodbye
+2025-09-01T12:24:37+0200 [INFO] ERROR websocket WLFI: Connection to remote host was lost.
+2025-09-01T12:24:37+0200 [ERROR] Connection to remote host was lost. - goodbye
+2025-09-01T12:33:47+0200 [INFO] RAW HTML DATE: 2025-09-01 11:00:00 for NODE
+2025-09-01T12:33:47+0200 [INFO] RAW HTML DATE: 2025-09-01 12:00:00 for WLFI
+2025-09-01T12:33:47+0200 [INFO] RAW HTML DATE: 2025-09-01 13:00:00 for FOREST
+2025-09-01T12:33:47+0200 [INFO] RAW HTML DATE: 2025-09-02 08:00:00 for Q
+2025-09-01T12:33:47+0200 [INFO] RAW HTML DATE: 2025-09-03 12:00:00 for MCH
+2025-09-01T12:33:47+0200 [INFO] + New upcoming: NODE at 2025-09-01T11:00:00+00:00
+2025-09-01T12:33:47+0200 [INFO] + New upcoming: WLFI at 2025-09-01T12:00:00+00:00
+2025-09-01T12:33:47+0200 [INFO] + New upcoming: FOREST at 2025-09-01T13:00:00+00:00
+2025-09-01T12:33:47+0200 [INFO] + New upcoming: Q at 2025-09-02T08:00:00+00:00
+2025-09-01T12:33:47+0200 [INFO] + New upcoming: MCH at 2025-09-03T12:00:00+00:00
+2025-09-01T12:40:17+0200 [INFO] 🕐 Time: 2025-09-01T10:40:17.769392+00:00
+2025-09-01T12:40:19+0200 [INFO] + New upcoming: NODE at 2025-09-01T11:00:00+00:00
+2025-09-01T12:40:19+0200 [INFO] + New upcoming: WLFI at 2025-09-01T12:00:00+00:00
+2025-09-01T12:40:19+0200 [INFO] + New upcoming: FOREST at 2025-09-01T13:00:00+00:00
+2025-09-01T12:40:19+0200 [INFO] + New upcoming: Q at 2025-09-02T08:00:00+00:00
+2025-09-01T12:40:19+0200 [INFO] + New upcoming: MCH at 2025-09-03T12:00:00+00:00
+2025-09-01T12:40:20+0200 [INFO] 🕐 Time: 2025-09-01T10:40:20.632817+00:00
+2025-09-01T12:40:21+0200 [INFO] 🕐 Time: 2025-09-01T10:40:21.634044+00:00
+2025-09-01T12:40:22+0200 [INFO] 🕐 Time: 2025-09-01T10:40:22.635518+00:00
+2025-09-01T12:40:23+0200 [INFO] 🕐 Time: 2025-09-01T10:40:23.637053+00:00
+2025-09-01T12:40:24+0200 [INFO] 🕐 Time: 2025-09-01T10:40:24.638539+00:00
+2025-09-01T12:40:25+0200 [INFO] 🕐 Time: 2025-09-01T10:40:25.640073+00:00
+2025-09-01T12:40:26+0200 [INFO] 🕐 Time: 2025-09-01T10:40:26.641547+00:00
+2025-09-01T12:40:27+0200 [INFO] 🕐 Time: 2025-09-01T10:40:27.642880+00:00
+2025-09-01T12:40:28+0200 [INFO] 🕐 Time: 2025-09-01T10:40:28.644140+00:00
+2025-09-01T12:40:29+0200 [INFO] 🕐 Time: 2025-09-01T10:40:29.645504+00:00
+2025-09-01T12:40:30+0200 [INFO] 🕐 Time: 2025-09-01T10:40:30.646634+00:00
+2025-09-01T12:40:31+0200 [INFO] 🕐 Time: 2025-09-01T10:40:31.647858+00:00
+2025-09-01T12:40:32+0200 [INFO] 🕐 Time: 2025-09-01T10:40:32.649082+00:00
+2025-09-01T12:40:33+0200 [INFO] 🕐 Time: 2025-09-01T10:40:33.650567+00:00
+2025-09-01T12:40:34+0200 [INFO] 🕐 Time: 2025-09-01T10:40:34.651657+00:00
+2025-09-01T12:40:35+0200 [INFO] 🕐 Time: 2025-09-01T10:40:35.652919+00:00
+2025-09-01T12:41:01+0200 [INFO] + New upcoming: NODE at 2025-09-01T11:00:00+00:00
+2025-09-01T12:41:01+0200 [INFO] + New upcoming: WLFI at 2025-09-01T12:00:00+00:00
+2025-09-01T12:41:01+0200 [INFO] + New upcoming: FOREST at 2025-09-01T13:00:00+00:00
+2025-09-01T12:41:01+0200 [INFO] + New upcoming: Q at 2025-09-02T08:00:00+00:00
+2025-09-01T12:41:01+0200 [INFO] + New upcoming: MCH at 2025-09-03T12:00:00+00:00
+2025-09-01T13:00:01+0200 [INFO] Websocket connected
+2025-09-01T13:00:02+0200 [INFO] ℹ️ NODE price tick → 0.10690000 USDT
+2025-09-01T13:00:02+0200 [INFO] ✅ Connected for NODE — initial price: 0.10690000 USDT
+2025-09-01T13:00:02+0200 [INFO] ℹ️ NODE price tick → 0.10690000 USDT
+2025-09-01T13:00:03+0200 [INFO] ℹ️ NODE price tick → 0.10700000 USDT
+2025-09-01T13:00:04+0200 [INFO] ℹ️ NODE price tick → 0.10740000 USDT
+2025-09-01T13:00:05+0200 [INFO] ℹ️ NODE price tick → 0.10745000 USDT
+2025-09-01T13:00:06+0200 [INFO] ℹ️ NODE price tick → 0.10790000 USDT
+2025-09-01T13:00:07+0200 [INFO] ℹ️ NODE price tick → 0.10790000 USDT
+2025-09-01T13:00:08+0200 [INFO] ℹ️ NODE price tick → 0.10936000 USDT
+2025-09-01T13:00:09+0200 [INFO] ℹ️ NODE price tick → 0.10879000 USDT
+2025-09-01T13:00:10+0200 [INFO] ℹ️ NODE price tick → 0.10815000 USDT
+2025-09-01T13:00:11+0200 [INFO] ℹ️ NODE price tick → 0.10815000 USDT
+2025-09-01T13:00:12+0200 [INFO] ℹ️ NODE price tick → 0.10815000 USDT
+2025-09-01T13:00:14+0200 [INFO] ℹ️ NODE price tick → 0.10811000 USDT
+2025-09-01T13:00:14+0200 [INFO] ℹ️ NODE price tick → 0.10810000 USDT
+2025-09-01T13:00:15+0200 [INFO] ℹ️ NODE price tick → 0.10816000 USDT
+2025-09-01T13:00:16+0200 [INFO] ℹ️ NODE price tick → 0.10836000 USDT
+2025-09-01T13:00:17+0200 [INFO] ℹ️ NODE price tick → 0.10836000 USDT
+2025-09-01T13:00:18+0200 [INFO] ℹ️ NODE price tick → 0.10879000 USDT
+2025-09-01T13:00:19+0200 [INFO] ℹ️ NODE price tick → 0.10880000 USDT
+2025-09-01T13:00:20+0200 [INFO] ℹ️ NODE price tick → 0.10885000 USDT
+2025-09-01T13:00:21+0200 [INFO] ℹ️ NODE price tick → 0.10885000 USDT
+2025-09-01T13:00:22+0200 [INFO] ℹ️ NODE price tick → 0.10885000 USDT
+2025-09-01T13:00:23+0200 [INFO] ℹ️ NODE price tick → 0.10900000 USDT
+2025-09-01T13:00:24+0200 [INFO] ℹ️ NODE price tick → 0.10900000 USDT
+2025-09-01T13:00:25+0200 [INFO] ℹ️ NODE price tick → 0.10900000 USDT
+2025-09-01T13:00:26+0200 [INFO] ℹ️ NODE price tick → 0.10900000 USDT
+2025-09-01T13:00:27+0200 [INFO] ℹ️ NODE price tick → 0.10935000 USDT
+2025-09-01T13:00:30+0200 [INFO] ℹ️ NODE price tick → 0.10935000 USDT
+2025-09-01T13:00:31+0200 [INFO] ℹ️ NODE price tick → 0.10938000 USDT
+2025-09-01T13:00:32+0200 [INFO] ℹ️ NODE price tick → 0.10938000 USDT
+2025-09-01T13:00:33+0200 [INFO] ℹ️ NODE price tick → 0.10938000 USDT
+2025-09-01T13:00:34+0200 [INFO] ℹ️ NODE price tick → 0.10938000 USDT
+2025-09-01T13:00:35+0200 [INFO] ℹ️ NODE price tick → 0.10938000 USDT
+2025-09-01T13:00:36+0200 [INFO] ℹ️ NODE price tick → 0.10938000 USDT
+2025-09-01T13:00:37+0200 [INFO] ℹ️ NODE price tick → 0.10938000 USDT
+2025-09-01T13:00:38+0200 [INFO] ℹ️ NODE price tick → 0.10900000 USDT
+2025-09-01T13:00:39+0200 [INFO] ℹ️ NODE price tick → 0.10940000 USDT
+2025-09-01T13:00:40+0200 [INFO] ℹ️ NODE price tick → 0.10990000 USDT
+2025-09-01T13:00:41+0200 [INFO] ℹ️ NODE price tick → 0.10895000 USDT
+2025-09-01T13:00:42+0200 [INFO] ℹ️ NODE price tick → 0.10900000 USDT
+2025-09-01T13:00:43+0200 [INFO] ℹ️ NODE price tick → 0.10900000 USDT
+2025-09-01T13:00:44+0200 [INFO] ℹ️ NODE price tick → 0.10900000 USDT
+2025-09-01T13:00:45+0200 [INFO] ℹ️ NODE price tick → 0.10948000 USDT
+2025-09-01T13:00:47+0200 [INFO] ℹ️ NODE price tick → 0.10944000 USDT
+2025-09-01T13:00:47+0200 [INFO] ℹ️ NODE price tick → 0.10944000 USDT
+2025-09-01T13:00:48+0200 [INFO] ℹ️ NODE price tick → 0.10944000 USDT
+2025-09-01T13:00:49+0200 [INFO] ℹ️ NODE price tick → 0.10980000 USDT
+2025-09-01T13:00:50+0200 [INFO] ℹ️ NODE price tick → 0.10980000 USDT
+2025-09-01T13:00:51+0200 [INFO] ℹ️ NODE price tick → 0.10989000 USDT
+2025-09-01T13:00:53+0200 [INFO] ℹ️ NODE price tick → 0.10990000 USDT
+2025-09-01T13:00:53+0200 [INFO] ℹ️ NODE price tick → 0.10990000 USDT
+2025-09-01T13:00:54+0200 [INFO] ℹ️ NODE price tick → 0.10990000 USDT
+2025-09-01T13:00:55+0200 [INFO] ℹ️ NODE price tick → 0.10990000 USDT
+2025-09-01T13:00:56+0200 [INFO] ℹ️ NODE price tick → 0.11010000 USDT
+2025-09-01T13:00:57+0200 [INFO] ℹ️ NODE price tick → 0.11010000 USDT
+2025-09-01T13:00:58+0200 [INFO] ℹ️ NODE price tick → 0.11010000 USDT
+2025-09-01T13:00:59+0200 [INFO] ℹ️ NODE price tick → 0.11040000 USDT
+2025-09-01T13:01:00+0200 [INFO] ℹ️ NODE price tick → 0.11040000 USDT
+2025-09-01T13:01:01+0200 [INFO] ℹ️ NODE price tick → 0.11055000 USDT
+2025-09-01T13:01:02+0200 [INFO] ℹ️ NODE price tick → 0.11055000 USDT
+2025-09-01T13:01:03+0200 [INFO] ℹ️ NODE price tick → 0.11010000 USDT
+2025-09-01T13:01:04+0200 [INFO] ℹ️ NODE price tick → 0.11010000 USDT
+2025-09-01T13:01:05+0200 [INFO] ℹ️ NODE price tick → 0.11010000 USDT
+2025-09-01T13:01:06+0200 [INFO] ℹ️ NODE price tick → 0.11055000 USDT
+2025-09-01T13:01:07+0200 [INFO] ℹ️ NODE price tick → 0.11055000 USDT
+2025-09-01T13:01:08+0200 [INFO] ℹ️ NODE price tick → 0.11055000 USDT
+2025-09-01T13:01:09+0200 [INFO] ℹ️ NODE price tick → 0.11052000 USDT
+2025-09-01T13:01:11+0200 [INFO] ℹ️ NODE price tick → 0.11052000 USDT
+2025-09-01T13:01:12+0200 [INFO] ℹ️ NODE price tick → 0.11055000 USDT
+2025-09-01T13:01:14+0200 [INFO] ℹ️ NODE price tick → 0.11077000 USDT
+2025-09-01T13:01:15+0200 [INFO] ℹ️ NODE price tick → 0.11077000 USDT
+2025-09-01T13:01:17+0200 [INFO] ℹ️ NODE price tick → 0.11090000 USDT
+2025-09-01T13:01:17+0200 [INFO] ℹ️ NODE price tick → 0.11090000 USDT
+2025-09-01T13:01:18+0200 [INFO] ℹ️ NODE price tick → 0.11120000 USDT
+2025-09-01T13:01:20+0200 [INFO] ℹ️ NODE price tick → 0.11120000 USDT
+2025-09-01T13:01:20+0200 [INFO] ℹ️ NODE price tick → 0.11120000 USDT
+2025-09-01T13:01:21+0200 [INFO] ℹ️ NODE price tick → 0.11140000 USDT
+2025-09-01T13:01:22+0200 [INFO] ℹ️ NODE price tick → 0.11200000 USDT
+2025-09-01T13:01:23+0200 [INFO] ℹ️ NODE price tick → 0.11200000 USDT
+2025-09-01T13:01:24+0200 [INFO] ℹ️ NODE price tick → 0.11200000 USDT
+2025-09-01T13:01:25+0200 [INFO] ℹ️ NODE price tick → 0.11202000 USDT
+2025-09-01T13:01:26+0200 [INFO] ℹ️ NODE price tick → 0.11210000 USDT
+2025-09-01T13:01:27+0200 [INFO] ℹ️ NODE price tick → 0.11200000 USDT
+2025-09-01T13:01:28+0200 [INFO] ℹ️ NODE price tick → 0.11186000 USDT
+2025-09-01T13:01:29+0200 [INFO] ℹ️ NODE price tick → 0.11172000 USDT
+2025-09-01T13:01:30+0200 [INFO] ℹ️ NODE price tick → 0.11160000 USDT
+2025-09-01T13:01:31+0200 [INFO] ℹ️ NODE price tick → 0.11160000 USDT
+2025-09-01T13:01:32+0200 [INFO] ℹ️ NODE price tick → 0.11184000 USDT
+2025-09-01T13:01:33+0200 [INFO] ℹ️ NODE price tick → 0.11200000 USDT
+2025-09-01T13:01:34+0200 [INFO] ℹ️ NODE price tick → 0.11200000 USDT
+2025-09-01T13:01:35+0200 [INFO] ℹ️ NODE price tick → 0.11200000 USDT
+2025-09-01T13:01:36+0200 [INFO] ℹ️ NODE price tick → 0.11200000 USDT
+2025-09-01T13:01:37+0200 [INFO] ℹ️ NODE price tick → 0.11230000 USDT
+2025-09-01T13:01:38+0200 [INFO] ℹ️ NODE price tick → 0.11120000 USDT
+2025-09-01T13:01:39+0200 [INFO] ℹ️ NODE price tick → 0.11184000 USDT
+2025-09-01T13:01:40+0200 [INFO] ℹ️ NODE price tick → 0.11083000 USDT
+2025-09-01T13:01:41+0200 [INFO] ℹ️ NODE price tick → 0.11073000 USDT
+2025-09-01T13:01:42+0200 [INFO] ℹ️ NODE price tick → 0.11037000 USDT
+2025-09-01T13:01:43+0200 [INFO] ℹ️ NODE price tick → 0.10998000 USDT
+2025-09-01T13:01:44+0200 [INFO] ℹ️ NODE price tick → 0.11000000 USDT
+2025-09-01T13:01:45+0200 [INFO] ℹ️ NODE price tick → 0.11037000 USDT
+2025-09-01T13:01:46+0200 [INFO] ℹ️ NODE price tick → 0.11035000 USDT
+2025-09-01T13:01:47+0200 [INFO] ℹ️ NODE price tick → 0.11035000 USDT
+2025-09-01T13:01:48+0200 [INFO] ℹ️ NODE price tick → 0.11046000 USDT
+2025-09-01T13:01:49+0200 [INFO] ℹ️ NODE price tick → 0.11039000 USDT
+2025-09-01T13:01:50+0200 [INFO] ℹ️ NODE price tick → 0.11039000 USDT
+2025-09-01T13:01:51+0200 [INFO] ℹ️ NODE price tick → 0.11000000 USDT
+2025-09-01T13:01:52+0200 [INFO] ℹ️ NODE price tick → 0.11000000 USDT
+2025-09-01T13:01:53+0200 [INFO] ℹ️ NODE price tick → 0.11000000 USDT
+2025-09-01T13:01:54+0200 [INFO] ℹ️ NODE price tick → 0.11039000 USDT
+2025-09-01T13:01:56+0200 [INFO] ℹ️ NODE price tick → 0.11030000 USDT
+2025-09-01T13:01:56+0200 [INFO] ℹ️ NODE price tick → 0.11030000 USDT
+2025-09-01T13:01:57+0200 [INFO] ℹ️ NODE price tick → 0.11040000 USDT
+2025-09-01T13:01:58+0200 [INFO] ℹ️ NODE price tick → 0.11080000 USDT
+2025-09-01T13:01:59+0200 [INFO] ℹ️ NODE price tick → 0.11080000 USDT
+2025-09-01T13:02:00+0200 [INFO] ℹ️ NODE price tick → 0.11092000 USDT
+2025-09-01T13:02:01+0200 [INFO] ℹ️ NODE price tick → 0.11112000 USDT
+2025-09-01T13:02:02+0200 [INFO] ℹ️ NODE price tick → 0.11060000 USDT
+2025-09-01T13:49:17+0200 [INFO] 🚀 TEST MODE: launching tracker for AIOT
+2025-09-01T13:49:18+0200 [INFO] Websocket connected
+2025-09-01T13:49:53+0200 [INFO] 🚀 TEST MODE: launching tracker for AIOT
+2025-09-01T13:49:56+0200 [INFO] Websocket connected
+2025-09-01T13:50:01+0200 [INFO] ℹ️ AIOT price tick → 1.53750000 USDT
+2025-09-01T13:50:01+0200 [INFO] ✅ Connected for AIOT — initial price: 1.53750000 USDT
+2025-09-01T13:50:02+0200 [INFO] ℹ️ AIOT price tick → 1.54260000 USDT
+2025-09-01T13:50:03+0200 [INFO] ℹ️ AIOT price tick → 1.54260000 USDT
+2025-09-01T13:50:05+0200 [INFO] ℹ️ AIOT price tick → 1.54260000 USDT
+2025-09-01T13:50:09+0200 [INFO] ℹ️ AIOT price tick → 1.54260000 USDT
+2025-09-01T13:50:12+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:15+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:23+0200 [INFO] 🚀 TEST MODE: launching tracker for AIOT
+2025-09-01T13:50:24+0200 [INFO] Websocket connected
+2025-09-01T13:50:25+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:25+0200 [INFO] ✅ Connected for AIOT — initial price: 1.53790000 USDT
+2025-09-01T13:50:26+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:30+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:32+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:33+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:36+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:37+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:38+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:39+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:41+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:48+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:50:52+0200 [INFO] 🚀 TEST MODE: launching tracker for AIOT
+2025-09-01T13:50:54+0200 [INFO] Websocket connected
+2025-09-01T13:51:00+0200 [INFO] DEBUG websocket: {'currency_pair': 'AIOT_USDT', 'last': '1.5379', 'lowest_ask': '1.5483', 'highest_bid': '1.5392', 'change_percentage': '-3.0817', 'base_volume': '84812.3', 'quote_volume': '133913.11371', 'high_24h': '1.75', 'low_24h': '1.53'}
+2025-09-01T13:51:00+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT
+2025-09-01T13:51:00+0200 [INFO] ✅ Connected for AIOT — initial price: 1.53790000 USDT
+2025-09-01T13:51:01+0200 [INFO] DEBUG websocket: {'currency_pair': 'AIOT_USDT', 'last': '1.5379', 'lowest_ask': '1.5482', 'highest_bid': '1.5386', 'change_percentage': '-3.0817', 'base_volume': '84812.3', 'quote_volume': '133913.11371', 'high_24h': '1.75', 'low_24h': '1.53'}
+2025-09-01T13:51:01+0200 [INFO] ℹ️ AIOT price tick → 1.53790000 USDT

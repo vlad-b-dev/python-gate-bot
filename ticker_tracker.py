@@ -1,6 +1,8 @@
 import json
 import time
 import sys
+import logging
+
 from datetime import datetime, timezone, timedelta
 
 from config import FLUCTUATION_THRESHOLD, MAX_FLUCTUATION_WINDOW, WEB_SOCKET_URL
@@ -31,7 +33,7 @@ class TickerTracker:
 
         now = datetime.now(timezone.utc)
         info = data.get("result", {})
-
+    
         # Extract the last price
         try:
             price = float(info["last"])

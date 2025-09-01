@@ -8,6 +8,8 @@ import os
 import logging
 from datetime import datetime, timezone
 from ticker_tracker import TickerTracker
+from config import HTML_LOCAL_TIMEZONE
+
 
 LOG_DIR = "C:/Users/usuario/python/python-gate-bot/logs"
 os.makedirs(LOG_DIR, exist_ok=True) 
@@ -43,10 +45,9 @@ def fetch_upcoming_currencies(upcoming_page_url):
         match = re.search(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}", date_tag.text)
         if not match:
             continue
-        upcoming[name_tag.text.strip().upper()] = datetime.strptime(
-            match.group(0),
-            "%Y-%m-%d %H:%M:%S"
-        ).replace(tzinfo=timezone.utc)
+        
+        utc_dt = datetime.strptime(match.group(0), "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+        upcoming[name_tag.text.strip().upper()] = utc_dt
 
     return upcoming
 
